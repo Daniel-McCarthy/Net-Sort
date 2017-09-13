@@ -21,9 +21,10 @@ namespace TestFramework
 
         static public void initializeRandomTest()
         {
+            Random rnd = new Random();
+
             for (int i = 0; i < randomTest.Length; i++)
             {
-                Random rnd = new Random();
                 randomTest[i] = (byte)rnd.Next(0, 100);
             }
         }
