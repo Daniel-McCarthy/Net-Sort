@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Diagnostics;
+
 namespace TestFramework
 {
     class Program
@@ -37,6 +39,7 @@ namespace TestFramework
 
             byte[] testResultData = new byte[100];
             bool testResult = false;
+            Stopwatch timer;
 
             Console.ReadKey();
         }
