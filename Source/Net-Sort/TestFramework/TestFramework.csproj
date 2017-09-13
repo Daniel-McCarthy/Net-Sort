@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Net-Sort\Net-Sort.csproj">
+      <Project>{1848053d-8448-43fb-89cb-7308573aef48}</Project>
+      <Name>Net-Sort</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

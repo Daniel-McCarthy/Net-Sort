@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Net_Sort;
 using System.Diagnostics;
 
 namespace TestFramework
@@ -35,7 +36,6 @@ namespace TestFramework
         {
             initializeDescendingTest();
             initializeRandomTest();
-
 
             byte[] testResultData = new byte[100];
             bool testResult = false;
