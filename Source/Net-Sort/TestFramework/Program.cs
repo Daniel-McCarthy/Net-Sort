@@ -8,8 +8,8 @@ namespace TestFramework
 {
     class Program
     {
-        byte[] descendingTest = new byte[100];
-        byte[] randomTest = new byte[100];
+        static public byte[] descendingTest = new byte[100];
+        static public byte[] randomTest = new byte[100];
 
         void initializeDescendingTest()
         {
