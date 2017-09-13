@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Net_Sort
 {
-    class BubbleSort
+    public static class BubbleSort
     {
     }
 }
