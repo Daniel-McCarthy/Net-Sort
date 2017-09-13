@@ -11,7 +11,7 @@ namespace TestFramework
         static public byte[] descendingTest = new byte[100];
         static public byte[] randomTest = new byte[100];
 
-        void initializeDescendingTest()
+        static public void initializeDescendingTest()
         {
             for (int i = 0; i < descendingTest.Length; i++)
             {
@@ -19,7 +19,7 @@ namespace TestFramework
             }
         }
 
-        void initializeRandomTest()
+        static public void initializeRandomTest()
         {
             for (int i = 0; i < randomTest.Length; i++)
             {
