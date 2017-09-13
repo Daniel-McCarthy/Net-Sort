@@ -31,6 +31,9 @@ namespace TestFramework
 
         static void Main(string[] args)
         {
+            initializeDescendingTest();
+            initializeRandomTest();
+
 
         static bool isSortedInAscendingOrder(byte[] data)
         {
