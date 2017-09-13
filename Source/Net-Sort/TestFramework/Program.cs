@@ -37,6 +37,10 @@ namespace TestFramework
 
             byte[] testResultData = new byte[100];
             bool testResult = false;
+
+            Console.ReadKey();
+        }
+
         static bool isSortedInAscendingOrder(byte[] data)
         {
             bool result = true;
