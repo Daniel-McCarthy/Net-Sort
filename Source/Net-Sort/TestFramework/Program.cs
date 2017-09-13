@@ -31,6 +31,21 @@ namespace TestFramework
 
         static void Main(string[] args)
         {
+
+        static bool isSortedInAscendingOrder(byte[] data)
+        {
+            bool result = true;
+
+            for(int i = 1; i < data.Length; i++)
+            {
+                if(data[i - 1] > data[i])
+                {
+                    result = false;
+                }
+            }
+
+            return result;
         }
+
     }
 }
