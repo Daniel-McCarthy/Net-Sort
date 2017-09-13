@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 using Net_Sort;
 using System.Diagnostics;
@@ -37,6 +38,9 @@ namespace TestFramework
             initializeDescendingTest();
             initializeRandomTest();
 
+            ReadOnlyCollection<byte> descendingTestRO = new ReadOnlyCollection<byte>(descendingTest);
+            ReadOnlyCollection<byte> randomTestRO = new ReadOnlyCollection<byte>(randomTest);
+
             byte[] testResultData = new byte[100];
             bool testResult = false;
             Stopwatch timer;
@@ -46,14 +50,14 @@ namespace TestFramework
             Console.WriteLine("Testing Bubble Sort:\n");
 
             timer = Stopwatch.StartNew();
-            testResultData = BubbleSort.bubbleSort(descendingTest);
+            testResultData = BubbleSort.bubbleSort(descendingTestRO.ToArray());
             timer.Stop();
             testResult = isSortedInAscendingOrder(testResultData);
 
             Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
             timer = Stopwatch.StartNew();
-            testResultData = BubbleSort.bubbleSort(randomTest);
+            testResultData = BubbleSort.bubbleSort(randomTestRO.ToArray());
             timer.Stop();
             testResult = isSortedInAscendingOrder(testResultData);
 
@@ -65,14 +69,14 @@ namespace TestFramework
             Console.WriteLine("\nTesting Selection Sort:\n");
 
             timer = Stopwatch.StartNew();
-            testResultData = SelectionSort.selectionSort(descendingTest);
+            testResultData = SelectionSort.selectionSort(descendingTestRO.ToArray());
             timer.Stop();
             testResult = isSortedInAscendingOrder(testResultData);
 
             Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
             timer = Stopwatch.StartNew();
-            testResultData = SelectionSort.selectionSort(randomTest);
+            testResultData = SelectionSort.selectionSort(randomTestRO.ToArray());
             timer.Stop();
             testResult = isSortedInAscendingOrder(testResultData);
 
