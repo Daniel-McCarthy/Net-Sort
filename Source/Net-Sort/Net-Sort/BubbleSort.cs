@@ -25,9 +25,10 @@ namespace Net_Sort
                     if (data[i - 1] > data[i])
                     {
                         //Swap current entry with previous entry
-                        c = data[i - 1];
-                        data[i - 1] = data[i];
-                        data[i] = c;
+
+                        c = data[i - 1];        //c = a
+                        data[i - 1] = data[i];  //a = b
+                        data[i] = c;            //b = c
 
                         hasSwapped = true;
                     }
