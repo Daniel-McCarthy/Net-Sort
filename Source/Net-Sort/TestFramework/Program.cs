@@ -59,6 +59,25 @@ namespace TestFramework
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
+
+            Console.WriteLine("\nTesting Selection Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = SelectionSort.selectionSort(descendingTest);
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = SelectionSort.selectionSort(randomTest);
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+
+
             Console.ReadKey();
         }
 
