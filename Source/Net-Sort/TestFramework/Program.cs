@@ -60,6 +60,8 @@ namespace TestFramework
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
 
+            //Selection Sort
+
             Console.WriteLine("\nTesting Selection Sort:\n");
 
             timer = Stopwatch.StartNew();
