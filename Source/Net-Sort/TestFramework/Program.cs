@@ -35,6 +35,8 @@ namespace TestFramework
             initializeRandomTest();
 
 
+            byte[] testResultData = new byte[100];
+            bool testResult = false;
         static bool isSortedInAscendingOrder(byte[] data)
         {
             bool result = true;
