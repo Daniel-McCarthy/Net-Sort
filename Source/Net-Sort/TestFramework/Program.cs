@@ -41,6 +41,24 @@ namespace TestFramework
             bool testResult = false;
             Stopwatch timer;
 
+            //Bubble Sort
+
+            Console.WriteLine("Testing Bubble Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = BubbleSort.bubbleSort(descendingTest);
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = BubbleSort.bubbleSort(randomTest);
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
             Console.ReadKey();
         }
 
