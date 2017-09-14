@@ -100,7 +100,26 @@ namespace TestFramework
             testResult = isSortedInAscendingOrder(testResultData);
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
-            
+
+
+            //Merge Sort
+
+            Console.WriteLine("\nTesting Merge Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = MergeSort.mergeSort(descendingTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = MergeSort.mergeSort(randomTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
 
 
             Console.ReadKey();
