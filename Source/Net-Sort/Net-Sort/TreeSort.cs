@@ -11,11 +11,11 @@ namespace Net_Sort
 
         public static byte[] treeSort(byte[] data)
         {
-            TreeNode root = new TreeNode(data[0], 0);
+            TreeNode root = new TreeNode(data[0]);
 
             for(int i = 1; i < data.Length; i++)
             {
-                root.addNode(new TreeNode(data[i], i));
+                root.addNode(new TreeNode(data[i]));
             }
 
             //Inorder Traversal
@@ -103,7 +103,7 @@ namespace Net_Sort
             public int duplicates = 0;
             public byte value = 0;
 
-            public TreeNode(byte value, int arrayIndex)
+            public TreeNode(byte value)
             {
                 this.value = value;
             }
