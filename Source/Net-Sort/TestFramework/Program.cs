@@ -120,6 +120,27 @@ namespace TestFramework
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
+            ////////////////////////////////////////////////////////////////////////////////////
+            //Tree Sort
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            Console.WriteLine("\nTesting Tree Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = TreeSort.treeSort(descendingTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = TreeSort.treeSort(randomTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+
 
 
             Console.ReadKey();
