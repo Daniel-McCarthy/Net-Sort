@@ -45,7 +45,9 @@ namespace TestFramework
             bool testResult = false;
             Stopwatch timer;
 
+            ////////////////////////////////////////////////////////////////////////////////////
             //Bubble Sort
+            ///////////////////////////////////////////////////////////////////////////////////
 
             Console.WriteLine("Testing Bubble Sort:\n");
 
@@ -63,8 +65,9 @@ namespace TestFramework
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
-
+            ////////////////////////////////////////////////////////////////////////////////////
             //Selection Sort
+            ///////////////////////////////////////////////////////////////////////////////////
 
             Console.WriteLine("\nTesting Selection Sort:\n");
 
@@ -82,7 +85,7 @@ namespace TestFramework
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
-            
+            ////////////////////////////////////////////////////////////////////////////////////
             //Insertion Sort
 
             Console.WriteLine("\nTesting Insertion Sort:\n");
@@ -101,8 +104,9 @@ namespace TestFramework
 
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
-
+            ////////////////////////////////////////////////////////////////////////////////////
             //Merge Sort
+            ///////////////////////////////////////////////////////////////////////////////////
 
             Console.WriteLine("\nTesting Merge Sort:\n");
 
