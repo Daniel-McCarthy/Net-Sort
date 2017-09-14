@@ -9,6 +9,89 @@ namespace Net_Sort
     public static class TreeSort
     {
 
+        public static byte[] treeSort(byte[] data)
+        {
+            TreeNode root = new TreeNode(data[0], 0);
+
+            for(int i = 1; i < data.Length; i++)
+            {
+                root.addNode(new TreeNode(data[i], i));
+            }
+
+            //Inorder Traversal
+            int index = 0;
+
+            bool traversed = false;
+
+            TreeNode nextNode = root;
+
+            while(!traversed)
+            {
+                if(!nextNode.visited)
+                {
+                    if (nextNode.left == null)
+                    {
+                        //Save Value and Pop
+                        for (int i = 0; i < nextNode.duplicates + 1; i++)
+                        {
+                            data[index] = nextNode.value;
+                            index++;
+                        }
+
+                        nextNode.visited = true;
+
+
+                        if (nextNode.right == null)
+                        {
+                            if (nextNode.parentNode == null)
+                            {
+                                traversed = true;
+                            }
+                            else
+                            {
+                                nextNode = nextNode.parentNode;
+                            }
+                        }
+                        else
+                        {
+                            if (nextNode.right.visited)
+                            {
+                                nextNode.right = null;
+                            }
+                            else
+                            {
+                                nextNode = nextNode.right;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        if (nextNode.left.visited)
+                        {
+                            nextNode.left = null;
+                        }
+                        else
+                        {
+                            nextNode = nextNode.left;
+                        }
+                    }
+                }
+                else
+                {
+                    if (nextNode.parentNode == null)
+                    {
+                        traversed = true;
+                    }
+                    else
+                    {
+                        nextNode = nextNode.parentNode;
+                    }
+                }
+            }
+
+            return data;
+        }
 
         private class TreeNode
         {
