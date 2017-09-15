@@ -166,6 +166,27 @@ namespace TestFramework
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
 
+            ////////////////////////////////////////////////////////////////////////////////////
+            //Gnome Sort
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            Console.WriteLine("\nTesting Gnome Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = GnomeSort.gnomeSort(descendingTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = GnomeSort.gnomeSort(randomTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+
 
 
             Console.ReadKey();
