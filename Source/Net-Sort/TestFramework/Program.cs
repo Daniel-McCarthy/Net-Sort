@@ -187,6 +187,27 @@ namespace TestFramework
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
 
+            ////////////////////////////////////////////////////////////////////////////////////
+            //Comb Sort
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            Console.WriteLine("\nTesting Comb Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = CombSort.combSort(descendingTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = CombSort.combSort(randomTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+
 
 
             Console.ReadKey();
