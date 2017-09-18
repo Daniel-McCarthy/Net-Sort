@@ -250,6 +250,27 @@ namespace TestFramework
             Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
 
 
+            ////////////////////////////////////////////////////////////////////////////////////
+            //Cocktail Sort
+            ///////////////////////////////////////////////////////////////////////////////////
+
+            Console.WriteLine("\nTesting Cocktail Sort:\n");
+
+            timer = Stopwatch.StartNew();
+            testResultData = CocktailSort.cocktailSort(descendingTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tDescending Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+            timer = Stopwatch.StartNew();
+            testResultData = CocktailSort.cocktailSort(randomTestRO.ToArray());
+            timer.Stop();
+            testResult = isSortedInAscendingOrder(testResultData);
+
+            Console.WriteLine("\tRandom Test took: " + timer.ElapsedTicks + " ticks. Sort success: " + testResult);
+
+
 
 
             Console.ReadKey();
